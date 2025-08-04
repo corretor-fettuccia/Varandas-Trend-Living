@@ -2211,7 +2211,7 @@ footer {
       <div class="form-group">
         <input type="email" id="popupEmail" placeholder="Seu melhor e-mail">
       </div>
-      <button type="submit" class="cta-button">
+      <button type="submit" id="submitButton2" class="cta-button">
         <i class="fas fa-paper-plane"></i> Enviar
       </button>
     </form>
@@ -2227,6 +2227,7 @@ footer {
     // Configura cada formulário
     //               FORM           BOTAO           LABEL 
     setupFormSubmit("contactForm1", "submitButton1", "resposta1", "https://script.google.com/macros/s/AKfycbyaQmiwGoT4nLz6MZWfA9qThOya7eM1RPzxkEetgT9y9597KC4aVD3AMnHSpcZM-ds/exec");
+    setupFormSubmit("popupForm", "submitButton2", "resposta2", "https://script.google.com/macros/s/AKfycbyaQmiwGoT4nLz6MZWfA9qThOya7eM1RPzxkEetgT9y9597KC4aVD3AMnHSpcZM-ds/exec");
 
 
     //-----------BEGIN SCRIPT POST FORM ------------------
@@ -2310,10 +2311,6 @@ footer {
     //    const favicon = document.querySelector('link[rel="icon"]');
     //    favicon.href = newIconPath;
     //} 
-
-
-
-
 
     function wamesend() {
         return generateWhatsAppLink(WPhone, defaultmsg);
