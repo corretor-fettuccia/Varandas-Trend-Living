@@ -1,0 +1,2243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonho Real - Seu Imóvel dos Sonhos</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["RealEstateListing", "Residence"],
+  "name": "Apartamento à Venda no Bairro Nossa Senhora das Graças, Canoas/RS | Varandas Trend Living",
+  "description": "Apartamentos de 1, 2 e 3 dormitórios (55m² a 131m²) com lazer completo no rooftop: piscina, salão de festas e vista panorâmica. Ótima localização, próximo ao Bourbon Shopping e fácil acesso à Porto Alegre. Financiamento direto com a construtora.",
+  "url": "https://seusite.com/varandas-trend-living-canoas",
+  "image": [
+    "https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/fachada.webp",
+    "https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-6.webp",
+    "https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/rooftop.webp"
+  ],
+  "listingStatus": "ForSale",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Monte Castelo, 235",
+    "addressLocality": "Canoas",
+    "addressRegion": "RS",
+    "postalCode": "92025-370",
+    "addressCountry": "BR",
+    "addressNeighborhood": "Nossa Senhora das Graças"
+  },
+  "numberOfRooms": {
+    "@type": "QuantitativeValue",
+    "value": "1, 2, 3",
+    "unitText": "dormitórios"
+  },
+  "floorSize": {
+    "@type": "QuantitativeValue",
+    "minValue": "55",
+    "maxValue": "131",
+    "unitText": "m²"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-29.927655",
+    "longitude": "-51.172714"
+  },
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Piscina no Rooftop"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Salão de Festas"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Acabamentos Premium"
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Vagas de Garagem"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "491000",
+    "priceCurrency": "BRL",
+    "priceValidUntil": "2025-12-31",
+    "availability": "https://schema.org/InStock",
+    "url": "https://seusite.com/varandas-trend-living-canoas"
+  },
+  "brand": {
+    "@type": "Brand",
+    "name": "Varandas Trend Living",
+    "logo": "https://flexinc.com.br/wp-content/uploads/2019/10/logo-Flex-vertical-negativo.png"
+  }
+}
+</script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+
+            
+    /* Defina aqui sua cor primária (base) */
+    /* 
+    * Sistema de Cores Baseado em Hue (Matiz)
+    * Defina o hue principal (0-360) para alterar todo o tema
+    * Exemplos:
+    * - Azul: 210 (padrão)
+    * - Vermelho: 0
+    * - Verde: 120
+    * - Roxo: 270
+    * - Laranja: 30
+    * - amarelo - 60
+    * - amadeirado - 50
+    */   
+
+    --primary-hue: 30; /* Azul - altere este valor para mudar o esquema de cores */
+    
+    /* Cores análogas (30° de diferença no círculo cromático) */
+    --primary-color: hsl(var(--primary-hue), 50%, 20%);
+    --secondary-color: hsl(calc(var(--primary-hue) + 30), 10%, 20%);
+    --accent-color: hsl(calc(var(--primary-hue) - 60), 10%, 45%);
+    
+    /* Cores derivadas */
+    --light-color: hsl(var(--primary-hue), 30%, 90%);
+    --dark-color: hsl(var(--primary-hue), 10%, 10%);
+    --fundo-color: hsl(var(--primary-hue), 5%, 100%);
+    
+    /* Cores neutras e constantes */
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --gray: hsl(0, 0%, 31%);
+    
+    /* Transições */
+    --transition-time: 0.5s;
+    
+    /* Gradientes */
+    --begin-color: linear-gradient(0deg, var(--primary-color) 0%, var(--accent-color) 130%);
+    --bgimg:url("https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/fachada.webp");
+     /*http://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80*/
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fundo-color);
+    color: var(--dark-color);
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, hsla(var(--primary-hue), 70%, 50%, 10%) 0%, hsla(calc(var(--primary-hue) + 10), 70%, 50%, 5%) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* Efeito de clique */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.795);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(9);
+        opacity: 10;
+    }
+}
+
+/* Header */
+header {
+    /*background: linear-gradient(0deg, var(--primary-color) 12%, var(--secondary-color) 120%);*/
+    background: hsla(var(--primary-hue), 100%, 8%, 0.3);
+    backdrop-filter: blur(50px);
+    color: var(--white);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.60);
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    padding: 0.5rem 1rem;
+    background: hsla(var(--primary-hue), 100%, 8%, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 2.8rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--bgimg) no-repeat center center/cover !important;
+    background-size: 120% auto;
+    background-position: 0% center;
+    animation: bgScroll 80s linear infinite;
+   }
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: var(--begin-color 10%);*/
+    background: linear-gradient(
+        40deg,
+        hsla(calc(var(--primary-hue) - 10), 30%, 50%, 0.30), /*degrade splash principal - cima*/
+        hsla(calc(var(--secondary-color) + 10), 30%, 50%, 0.30)  /*degrade splash principal - baixo*/
+    );
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    transform: translateY(120px);
+    opacity: 0;
+    transition: all 3.8s ease;
+}
+
+.hero-content {
+  backdrop-filter: blur(2px);
+  border-radius: 5px;
+}
+
+.hero-content.animate {
+    transform: translateY(0);
+    opacity: 20;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 2.2;    
+}
+
+:where(.hero p, .hero h1, .contact-container p, .contact-container h1, .contact-container h2, .contact-container span){
+    text-shadow:
+        0 0 5px rgba(0, 0, 0, 0.5),
+        0 0 5px rgba(0, 0, 0, 0.5),
+        0 0 5px rgba(0, 0, 0, 0.5),
+        0 0 5px rgba(0, 0, 0, 0.5), /* Borda mais suave */
+        0 0 30px var(--dark-color); /* Borda mais suave */
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+
+        /* BOTAO WHATSAPP */
+        .btn-whatsapp {
+            background: #25D366;
+            margin-left: 1rem;
+        }
+        /* BOTAO WHATSAPP - hover*/
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+
+.btn-whatsapp,
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.cta-button:hover {
+    background-color: hsla(calc(var(--primary-hue) - 30), 70%, 35%, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-whatsapp,
+.cta-button:active {
+    transform: translateY(-1px);
+}
+
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating-element {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+/* About Property */
+.about-property {
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.property-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.property-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.property-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.property-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.property-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.property-card:hover img {
+    transform: scale(1.05);
+}
+
+.property-info {
+    padding: 1.5rem;
+}
+
+.property-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.property-info p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.property-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.feature i {
+    margin-right: 5px;
+    color: var(--secondary-color);
+}
+
+/* Carousel */
+.carousel-section {
+    padding: 1rem 0;
+    background-color: var(--light-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.carousel {
+    position: relative;
+    height: 500px;
+    perspective: 1000px;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.carousel-item.prev,
+.carousel-item.next {
+    opacity: 0.7;
+    z-index: 9;
+}
+
+.carousel-item.prev {
+    transform: translateX(-30%) scale(0.9);
+}
+
+.carousel-item.next {
+    transform: translateX(30%) scale(0.9);
+}
+
+.carousel-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--white);
+    width: 100%;
+    padding: 2rem;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
+}
+
+.carousel-item.active .carousel-caption {
+    transform: translateY(0);
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 20;
+    transform: translateY(-50%);
+}
+
+.carousel-control {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0 1rem;
+}
+
+.carousel-control:hover {
+    background-color: var(--white);
+    transform: scale(1.1);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.indicator.active {
+    background-color: var(--white);
+    transform: scale(1.2);
+}
+
+/* Map Section */
+.map-section {
+    padding: 1rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-container {
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.map-container.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Contact Form */
+.contact-section { /*contato css*/
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color) 0% 0 12%, var(--secondary-color) 100%);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    background: var(--bgimg) no-repeat center center/cover !important;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+/*animação ----- inicio*/
+  @keyframes panBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 20% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+.contact-section {
+    animation: panBackground 10s infinite linear;
+}
+/*animação ----- fim*/
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease;
+    backdrop-filter: blur(10px);
+    background: hsla(var(--primary-hue), 30%, 70%, 70%);
+}
+
+.contact-info.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.contact-details {
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease 0.2s;
+}
+
+.contact-form.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+.contact-info-div{
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 0.1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px hsla(var(--primary-hue), 70%, 45%, 0.2);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: hsla(calc(var(--primary-hue) - 30), 70%, 35%, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating Rectangles */
+.floating-rectangles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.rectangle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.438);
+    animation: float-rectangle 10s infinite linear;
+}
+
+@keyframes float-rectangle {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-50px) translateX(50px) rotate(10deg);
+    }
+    50% {
+        transform: translateY(0) translateX(100px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(50px) translateX(50px) rotate(-80deg);
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 62px 60px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all 0.3s;
+    text-decoration: none;
+    animation: pulse 1s infinite;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.footer-logo i {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.footer-contact {
+    margin-bottom: 2rem;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-social {
+    margin-bottom: 2rem;
+}
+
+.footer-social a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 70px);
+        background-color: var(--primary-color);
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel {
+        height: 400px;
+    }
+
+    .carousel-control {
+        width: 40px;
+        height: 40px;
+        margin: 0 0.5rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        
+    }
+
+
+    .contact-info,
+    .contact-form {
+        transform: none !important;
+    }
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Elevator Elements */
+.elevator {
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    animation: elevator-move 8s infinite linear;
+    z-index: -1;
+}
+
+@keyframes elevator-move {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+}
+
+/* Scroll-triggered animations */
+[data-animate] {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+[data-animate="fadeIn"] {
+    transform: translateY(30px);
+}
+
+[data-animate="fadeIn"].animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-animate="slideLeft"] {
+    transform: translateX(-50px);
+}
+
+[data-animate="slideLeft"].animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-animate="slideRight"] {
+    transform: translateX(50px);
+}
+
+[data-animate="slideRight"].animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+    </style>
+</head>
+
+<body>
+    <!-- Ripple Effect -->
+    <div id="ripple-container"></div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-element" style="width: 50px; height: 50px; top: 20%; left: 10%; animation-delay: 0s;">
+        </div>
+        <div class="floating-element" style="width: 30px; height: 30px; top: 50%; left: 80%; animation-delay: 0s;">
+        </div>
+        <div class="floating-element" style="width: 40px; height: 40px; top: 70%; left: 30%; animation-delay: 0s;">
+        </div>
+        <div class="floating-element" style="width: 40px; height: 40px; top:90%; left: 30%; animation-delay: 4s;">
+        </div>
+        <div class="elevator" style="top: 10%; left: 5%; animation-delay: 0s;"></div>
+        <div class="elevator" style="top: 60%; left: 90%; animation-delay: 3s;"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+                <span>Varandas Trend Living - Canoas</span> <!--EDITAR-->
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre o Imóvel</a></li>
+                    <li><a href="#plantas">Plantas</a></li>
+                    <li><a href="#infra">Infra</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#location">Localização</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-animate="fadeIn">
+            <h1>Apartamentos com excelente infraestrutura</h1>
+            <p>Descubra o lar perfeito que combina com seu estilo de vida. Conforto, elegância e localização
+                privilegiada em um só lugar.</p>
+            <p>Busca um apartamento moderno, com varanda e churrasqueira própria — mas sem abrir mão de segurança, conforto e localização estratégica?</p>
+            <a href="#contact" class="cta-button">Agende uma Visita</a>
+            <a onclick="window.open(wamesend(), '_blank')" class="btn-whatsapp">Fale com especialista hoje mesmo.</a>
+        </div>
+    </section>
+
+    <!-- About Property -->
+    <section class="about-property" id="about">
+        <h2 class="section-title" data-animate="fadeIn">Conheça o Varandas</h2>
+        <div class="property-grid">
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/sacada.webp"
+                    alt="Sacada com churrasqueira">
+                <div class="property-info">
+                    <h3>Sacada com Churrasqueira</h3>
+                    <p>A sacada com churrasqueira para desfrutar momentos com amigos e familiares.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="far fa-eye"></i> Vista panorâmica</div>
+                        <div class="feature"><i class="fas fa-cocktail"></i> Churrasqueira</div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/piscina.webp"
+                    alt="Piscina">
+                <div class="property-info">
+                    <h3>Piscina</h3>
+                    <p>Piscina localizada no rooftop, proporcionando uma vista fantástica da zona metropolitana.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-swimming-pool"></i>Piscina</div>
+                    </div>
+                </div>
+            </div>
+                        <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/spa.webp"
+                    alt="Spa localizado no rooftop para tirar o estresse do dia-a-dia">
+                <div class="property-info">
+                    <h3>Spa</h3>
+                    <p>Spa localizada no rooftop com máximo de conforto.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-hot-tub"></i>Spa com pergolado</div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/gourmet.webp"
+                    alt="Gourmet fechado">
+                <div class="property-info">
+                    <h3>Área gourmet fechada</h3>
+                    <p>Para momentos reservados com amigos ou familiares</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-utensils	"></i> Gourmet fechado</div>
+                        <div class="feature"><i class="fas fa-user-friends	">+</i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/fitness-externo.webp"
+                    alt="Fitness">
+                <div class="property-info">
+                    <h3>Área externa fitness</h3>
+                    <p>Seja para meditação, seja para alongamento</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-heart"></i>Meditar e respirar</div>
+                        <div class="feature"><i class="fas fa-spa"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/winegarden.webp"
+                    alt="Wine garden">
+                <div class="property-info">
+                    <h3>Wine garden</h3>
+                    <p>Espaço para degustar um bom vinho ou espumante, conversar ou ler um bom livro.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-glass-martini-alt"></i></div>
+                        <div class="feature"><i class="fas fa-wine-bottle"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/salao.webp"
+                    alt="Salao de festas">
+                <div class="property-info">
+                    <h3>Salão de festas</h3>
+                    <p>Para comemorar grandes momentos e reunir-se com os amigos.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-birthday-cake"></i>Festas e aniversários</div>
+                        <div class="feature"><i class="fas fa-wine-bottle"></i>Equipamentos e utensílios</div>
+                        <div class="feature"><i class="fas fa-drumstick-bite"></i>Churrasqueira</div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/coworking.webp"
+                    alt="Coworking">
+                <div class="property-info">
+                    <h3>Espaço Coworking</h3>
+                    <p>Para quem precisa tratar de negócios com a comodidade de poder trabalhar de casa ou até mesmo atender um cliente sem perder a privacidade.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-user-tie	"></i>Espaço para negócios</div>
+                        <div class="feature"><i class="fas fa-coffee"></i></div>
+                        <div class="feature"><i class="fas fa-rss"></i>Infra completa para trabalhar de casa</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/salajogos.webp"
+                    alt="Sala de Jogos">
+                <div class="property-info">
+                    <h3>Sala de Jogos</h3>
+                    <p>Para passar o tempo e ocupar a garotada.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-chess"></i>Jogos</div>
+                    </div>
+                </div>
+            </div>
+           <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/rooftop.webp"
+                    alt="Rooftop">
+                <div class="property-info">
+                    <h3>Rooftop</h3>
+                    <p></p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-cookie-bite"></i></div>
+                        <div class="feature"><i class="fas fa-pizza-slice"></i></div>
+                        <div class="feature"><i class="fas fa-hamburger"></i></div>
+                        <div class="feature"><i class="fas fa-fire-alt"></i></div>
+                        <div class="feature"><i class="fas fa-swimmer"></i></div>
+                        <div class="feature"><i class="fas fa-hands-wash"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/quiosques.webp"
+                    alt="Quiosques">
+                <div class="property-info">
+                    <h3>Quiosques</h3>
+                    <p>Quiosques para pizza, ou Parrilla</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-drumstick-bite"></i> Parrilla</div>
+                        <div class="feature"><i class="fas fa-pizza-slice"></i> Pizza</div>
+                    </div>
+                </div>
+            </div>
+           <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/playground.webp"
+                    alt="Playground">
+                <div class="property-info">
+                    <h3>Playground</h3>
+                    <p>Para momentos de diversão da criançada</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-puzzle-piece"></i>Playground</div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/petplace.webp"
+                    alt="Pet Place">
+                <div class="property-info">
+                    <h3>Área Pet</h3>
+                    <p>Para quem se preocupa com o seu amiguinho de estimação, conta com área para brincar!</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-paw"></i>Pet</div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/market.webp"
+                    alt="Mini Market">
+                <div class="property-info">
+                    <h3>Mini Market</h3>
+                    <p>O varandas conta com Mini Mercado para compras casuais de última hora sem precisar sair de casa.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-carrot"></i></div>
+                        <div class="feature"><i class="fas fa-shopping-cart	"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/lavanderia.webp"
+                    alt="Lavanderia">
+                <div class="property-info">
+                    <h3>Lavanderia</h3>
+                    <p>Conta com lavanderia nas dependências, facilita para quem não quer ter espaço desperdiçado dentro de casa.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-hand-sparkles"></i></div>
+                        <div class="feature"><i class="fas fa-tshirt"></i>Lavanderia</div>
+                        <div class="feature"><i class="fas fa-paw"></i>Dar bamho no pet</div>
+
+                    </div>
+                </div>
+            </div>
+           <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/kids.webp"
+                    alt="Kids">
+                <div class="property-info">
+                    <h3>Kids</h3>
+                    <p>Para momentos de diversão da criançada</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-puzzle-piece"></i>Playground</div>
+                    </div>
+                </div>
+            </div>
+           <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/hall.webp"
+                    alt="Hall de entrada">
+                <div class="property-info">
+                    <h3>Hall de entrada</h3>
+                    <p>Hall de entrada vistoso e imponente</p>
+           
+                </div>
+            </div>
+           <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/fireplace.webp"
+                    alt="Fire Place">
+                <div class="property-info">
+                    <h3>Fire Place</h3>
+                    <p>Para momentos de conversar e descontrair sob uma calorosa chama.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-fire-alt"></i></div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://image"
+                    alt="Área Externa">
+                <div class="property-info">
+                    <h3>Áreas de Lazer</h3>
+                    <p>Piscina, jardim privativo e espaço gourmet perfeito para entreter amigos e família.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-swimming-pool"></i> Piscina</div>
+                        <div class="feature"><i class="fas fa-umbrella-beach"></i> Área Externa</div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+
+ <!-- Plantas -->
+    <section class="about-property" id="plantas">
+        <h2 class="section-title" data-animate="fadeIn">Plantas</h2>
+        <div class="property-grid">
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Planta-1.webp"
+                    alt="55,70m²">
+                <div class="property-info">
+                    <h3>2 Dorm com Suíte + Sacada</h3>
+                    <p>Apartamento com dois dormitórios, sendo 1 com suíte.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-ruler-combined"></i> 55,70m²</div>
+                        <div class="feature"><i class="fas fa-bed"></i>2 Dormitórios</div>
+                        <div class="feature"><i class="fas fa-bath"></i>2 Banheiros</div>
+                        <div class="feature"><i class="fas fa-utensils"></i>Churrasqueira</div>
+                        <div class="feature"><i class="fas fa-clone"></i>Sacada</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Planta-2.webp"
+                    alt="67,88m²">
+                <div class="property-info">
+                    <h3>2 Dorm com Suíte</h3>
+                    <p>Apartamento com 2 dormitórios, sendo 1 com suíte, com living estendido.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-ruler-combined"></i> 67,88m²</div>
+                        <div class="feature"><i class="fas fa-bed"></i>2 Dormitórios</div>
+                        <div class="feature"><i class="fas fa-bath"></i>2 Banheiros</div>
+                        <div class="feature"><i class="fas fa-utensils"></i>Churrasqueira</div>
+                        <div class="feature"><i class="far fa-object-group"></i>Living Estendido</div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Planta-3.webp"
+                    alt="78,14m²">
+                <div class="property-info">
+                    <h3>2 Dorm com Suíte</h3>
+                    <p>Apartamento com 2 dormitórios, sendo 1 com suíte, com living estendido.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-ruler-combined"></i>78,14m²</div>
+                        <div class="feature"><i class="fas fa-bed"></i>2 Dormitórios</div>
+                        <div class="feature"><i class="fas fa-bath"></i>2 Banheiros</div>
+                        <div class="feature"><i class="fas fa-utensils"></i>Churrasqueira</div>
+                        <div class="feature"><i class="far fa-object-group"></i>Living Estendido</div>
+                        <div class="feature"><i class="fas fa-clone"></i>Sacada</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Planta-4.webp"
+                    alt="67,88m²">
+                <div class="property-info">
+                    <h3>3 Dorm com Suíte</h3>
+                    <p>Apartamento com 3 dormitórios, sendo 1 com suíte.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-ruler-combined"></i>67,88m²</div>
+                        <div class="feature"><i class="fas fa-bed"></i>3 Dormitórios</div>
+                        <div class="feature"><i class="fas fa-bath"></i>2 Banheiros</div>
+                        <div class="feature"><i class="fas fa-utensils"></i>Churrasqueira</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Planta-5.webp"
+                    alt="78,14m²">
+                <div class="property-info">
+                    <h3>3 Dorm com Suíte</h3>
+                    <p>Apartamento com 3 dormitórios, sendo 1 com suíte.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-ruler-combined"></i>78,14m²</div>
+                        <div class="feature"><i class="fas fa-bed"></i>3 Dormitórios</div>
+                        <div class="feature"><i class="fas fa-bath"></i>2 Banheiros</div>
+                        <div class="feature"><i class="fas fa-utensils"></i>Churrasqueira</div>
+                        <div class="feature"><i class="fas fa-clone"></i>Sacada</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Planta-6.webp"
+                    alt="67,88m² + 53,45m²">
+                <div class="property-info">
+                    <h3>2 Dorm com Suíte</h3>
+                    <p>Apartamento com 2 dormitórios, sendo 1 com suíte, Living estendido e pátio com espera para piscina.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-ruler-combined"></i>67,88m² + 53,45m²</div>
+                        <div class="feature"><i class="fas fa-bed"></i>3 Dormitórios</div>
+                        <div class="feature"><i class="fas fa-bath"></i>2 Banheiros</div>
+                        <div class="feature"><i class="fas fa-utensils"></i>Churrasqueira</div>
+                        <div class="feature"><i class="far fa-object-group"></i>Living Estendido</div>
+                        <div class="feature"><i class="fas fa-crop-alt"></i>Patio</div>
+                        <div class="feature"><i class="fas fa-swimmer"></i>Espera para Piscina</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Planta-7.webp"
+                    alt="78,14m² + 53,45m²">
+                <div class="property-info">
+                    <h3>2 Dorm com Suíte</h3>
+                    <p>Apartamento com 2 dormitórios, sendo 1 com suíte, Living estendido e pátio com espera para piscina.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-ruler-combined"></i>78,14m² + 53,45m²</div>
+                        <div class="feature"><i class="fas fa-bed"></i>3 Dormitórios</div>
+                        <div class="feature"><i class="fas fa-bath"></i>2 Banheiros</div>
+                        <div class="feature"><i class="fas fa-utensils"></i>Churrasqueira</div>
+                        <div class="feature"><i class="far fa-object-group"></i>Living Estendido</div>
+                        <div class="feature"><i class="fas fa-crop-alt"></i>Patio</div>
+                        <div class="feature"><i class="fas fa-swimmer"></i>Espera para Piscina</div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="property-card" data-animate="fadeIn">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Planta-1.webp"
+                    alt="55,70m²">
+                <div class="property-info">
+                    <h3>1 Dorm + 1 Suíte</h3>
+                    <p>Apartamento com dois dormitórios.</p>
+                    <div class="property-features">
+                        <div class="feature"><i class="fas fa-ruler-combined"></i> 55,70m²</div>
+                        <div class="feature"><i class="fas fa-bed"></i>2 Dormitórios</div>
+                        <div class="feature"><i class="fas fa-bath"></i>2 Banheiros</div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+    <!-- infraestrutura-->
+    <section>
+
+    </section>
+    <section class="about-property" id="infra">
+        <h2 class="section-title" data-animate="fadeIn">Infraestrutura</h2>
+        <div class="property-grid">
+            <img style="width:100%" src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/infra-1.webp">
+        </div>
+        <div class="property-grid">
+                    <img style="width:100%" src="https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Inra-2.webp">
+        </div>                
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section" id="gallery">
+        <div class="carousel-container">
+            <h2 class="section-title" data-animate="fadeIn">Galeria</h2>
+            <div class="carousel">
+                <div class="carousel-inner" id="carouselInner">
+                    <div class="carousel-item active"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-10.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-10</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-12.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-12</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-14.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-14</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-15.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-15</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-17.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-17</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-19.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-19</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-20.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-20</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-22.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-22</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-24.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-24</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-26.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-26</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-29.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-29</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-30.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-30</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-32.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-32</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-34.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-34</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-36.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-36</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-7.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-7</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-8.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-8</h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item"
+                        style="background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/Varandas-Trend-Living/refs/heads/main/Decorado-9.webp');">
+                        <div class="carousel-caption">
+                            <h3>Decorado-9</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="carousel-item"
+                        style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                        <div class="carousel-caption">
+                            <h3>Cozinha Moderna</h3>
+                            <p>Equipada com os melhores eletrodomésticos e iluminação.</p>
+                        </div>
+                    </div>
+                    -->
+                    
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-control" id="prevBtn"><i class="fas fa-chevron-left"></i></div>
+                    <div class="carousel-control" id="nextBtn"><i class="fas fa-chevron-right"></i></div>
+                </div>
+                <div class="carousel-indicators" id="indicators">
+                    <div class="indicator active"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="location">
+        <h2 class="section-title" data-animate="fadeIn">Localização Privilegiada</h2>
+        <div class="map-container" data-animate="fadeIn">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1594.935640544433!2d-51.1738524354185!3d-29.927938599572634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197073c1099111%3A0x3bb3d9b0a0a3efbe!2sR.%20Monte%20Castelo%2C%20235%20-%20Nossa%20Sra.%20das%20Gracas%2C%20Canoas%20-%20RS%2C%2092025-370!5e0!3m2!1spt-BR!2sbr!4v1754270632798!5m2!1spt-BR!2sbr"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="floating-rectangles">
+            <div class="rectangle" style="width: 60px; height: 60px; top: 10%; left: 20%; animation-delay: 0s;"></div>
+            <div class="rectangle" style="width: 40px; height: 40px; top: 30%; left: 70%; animation-delay: 3s;"></div>
+            <div class="rectangle" style="width: 80px; height: 80px; top: 60%; left: 10%; animation-delay: 6s;"></div>
+            <div class="rectangle" style="width: 50px; height: 50px; top: 80%; left: 80%; animation-delay: 9s;"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info contact-info-div" data-animate="slideLeft">
+                <h2>Entre em Contato</h2>
+                <p>Com entrada reduzida, prestações suaves e infraestrutura premium, esta unidade oferece o equilíbrio ideal entre investimento inteligente e qualidade de vida. É uma excelente oportunidade para fechamento rápido em Canoas.</p>
+                <p>Garanta já seu lugar no Varandas Trend Living e viva em um apartamento completo, com excelente planta e uma vista inspiradora todos os dias.</p> <!--EDITAR-->
+                <p>Estamos à disposição para esclarecer todas as suas dúvidas e agendar uma visita ao imóvel. Preencha o
+                    formulário ou entre em contato diretamente pelos nossos canais.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(51) 9.9811-1078</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>corretor.fettuccia@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-id-card"></i>
+                        <span>CRECI 083599-F</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form" data-animate="slideRight">
+                <h3>Agende uma Visita</h3>
+                <form id="contactForm1"> <!-- formulario -->
+                    <input type="text" id="produto1" name="produto" value="Grand Park Moinhos" hidden> <br>
+                    <input type="hidden" id="dataHora1" name="dataHora">
+
+                    <!-- Campos existentes visíveis -->
+                    <div class="form-group">
+                        <label for="nome1">Nome Completo:*</label>
+                        <input type="text" id="nome1" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:*</label>
+                        <input type="emai" id="email1" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone1">Telefone:*</label>
+                        <input type="tel" id="telefone1" name="telefone" required>
+                    </div>
+
+                    <!-- RENDA -->
+                    <!-- PARA ATIVAR  style="display:block;" -->
+                    <div style="display:none;" class="form-group">
+                        <label for="renda1">Renda Mensal:</label>
+                        <input type="text" id="renda1" name="renda">
+                    </div>
+
+                    <!-- NASCIMENTO -->
+                    <!-- PARA ATIVAR  style="display:block;" -->
+                    <div style="display:none;" class="form-group">
+                        <label for="nascimento1">Data de Nascimento:</label>
+                        <input type="date" id="nascimento1" name="nascimento">
+                    </div>
+
+                    <!-- COMPLEMENTO -->
+                    <!-- PARA ATIVAR  style="display:block;" -->
+                    <div style="display:NONE;" class="form-group radio-group">
+                        <div class="radio-option">
+                            <input type="checkbox" id="anosCtps1" name="anosCtps" value="X">
+                            <label for="anosCtps1">3 Anos de carteira assinada ?</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="fatorsocial1" name="fatorsocial" value="X">
+                            <label for="fatorsocial1">Possui cônjuge ou dependente(a)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="imovelnome1" name="imovelnome" value="X">
+                            <label for="imovelnome1">Possui imóbvel no nome ?</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="msg">Mensagem:</label>
+                        <textarea id="msg" name="msg" rows="4" required></textarea>
+                        
+                    <div id="resposta1" style="text-align: center; margin-top: 20px;"></div>
+
+                    <button type="submit" class="submit-btn" id="submitButton1">Enviar</button>
+                </form> <!-- FORMULARIO FIM -->
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a onclick="window.open(wamesend(), '_blank')" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fas fa-home"></i>
+                <span>Varandas Trend Living</span>
+            </div>
+            <div class="footer-contact">
+                <p><i class="fas fa-phone"></i> (51) 99811-1078</p>
+                <p><i class="fas fa-envelope"></i> corretor.fettuccia@gmail.com</p>
+                <p><i class="fas fa-id-card"></i> CRECI 083599-F</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=61578643079999"><i class="fab fa-facebook"></i></a>
+                <a href="http://instagram.com/roberto.fettuccia"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/roberto-fettuccia/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 Roberto Fettuccia - Todos os direitos reservados
+            </div>
+            <div hidden aria-hidden="true">
+  <!-- Atributos do empreendimento (oculto para usuários, visível para SEO) -->
+  Sacada com Churrasqueira | Ventilação cruzada | Espera elétrica para ar condicionado | Áreas de lazer entregues mobiliadas e climatizadas | 2 elevadores por torre | Medidores individuais de água e gás | Esquadrias externas em alumínio preto | Vagas Duplas e Simples | Espera para carregador de carro elétrico
+  <!-- Diferenciais emocionais -->
+  SERENIDADE E BEM-ESTAR: Ruas pouco movimentadas e muita natureza. + PRATICIDADE E CONVENIÊNCIA: Perto de tudo que a vida precisa para fluir bem. + MOBILIDADE E QUALIDADE DE VIDA: Fácil acesso às vias rápidas que levam a todas as direções.
+  <!-- Endereço -->
+  Rua Monte Castelo, 235 | Nossa Senhora das Graças, Canoas/RS
+  <!-- Áreas de lazer -->
+  LAZER PARA QUEM GOSTA DE APROVEITAR AO MÁXIMO: DO TÉRREO AO ROOFTOP
+  Hall de Entrada | Espaço Delivery | Mini Market | Coworking | Lavanderia | Pet Wash | Pet Place | Sala de Cinema | Salão de Jogos | Brinquedoteca | Playground | Piscina | Pergolado com Spa | Fitness | Espaço Zen | Salão de Festas | Externo Salão de Festas | Espaço Gourmet | Quiosque Parrilla | Quiosque Pizza | Fireplace | Wine Garden
+</div>
+        </div>
+    </footer>
+
+    <script>
+        // Ripple Effect
+        document.addEventListener('click', function (e) {
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            ripple.style.left = e.clientX - 10 + 'px';
+            ripple.style.top = e.clientY - 10 + 'px';
+            document.getElementById('ripple-container').appendChild(ripple);
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 0);
+        });
+
+        // Mobile Menu
+        const mobileMenu = document.getElementById('mobileMenu');
+        const nav = document.getElementById('nav');
+
+        mobileMenu.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenu.innerHTML = nav.classList.contains('active') ?
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Hero Animation
+        const heroContent = document.querySelector('.hero-content');
+        setTimeout(() => {
+            heroContent.classList.add('animate');
+        }, 100);
+
+        // Carousel
+        const carouselInner = document.getElementById('carouselInner');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.getElementById('indicators').children;
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+
+        function updateCarousel() {
+            items.forEach((item, index) => {
+                item.classList.remove('active', 'prev', 'next');
+
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                } else if (index === (currentIndex - 1 + totalItems) % totalItems) {
+                    item.classList.add('prev');
+                } else if (index === (currentIndex + 1) % totalItems) {
+                    item.classList.add('next');
+                }
+            });
+
+            Array.from(indicators).forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        });
+
+        Array.from(indicators).forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+
+        // Auto-rotate carousel
+        let carouselInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        }, 5000);
+
+        carouselInner.addEventListener('mouseenter', () => {
+            clearInterval(carouselInterval);
+        });
+
+        carouselInner.addEventListener('mouseleave', () => {
+            carouselInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalItems;
+                updateCarousel();
+            }, 5000);
+        });
+
+        // Scroll Animation
+        const animateElements = document.querySelectorAll('[data-animate]');
+
+        function checkScroll() {
+            animateElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('animate');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+
+
+        // Form Submission
+        /*
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For demonstration, we'll just show an alert
+            alert('Obrigado pelo seu interesse! Entraremos em contato em breve.');
+            contactForm.reset();
+        });
+        */
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // Generate random floating elements
+        function generateFloatingElements() {
+            const floatingElements = document.querySelector('.floating-elements');
+            const colors = ['rgba(52, 152, 219, 0.2)', 'rgba(231, 76, 60, 0.2)', 'rgba(46, 204, 113, 0.2)', 'rgba(241, 196, 15, 0.2)'];
+
+            for (let i = 0; i < 10; i++) {
+                const element = document.createElement('div');
+                const size = Math.random() * 50 + 20;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+
+                element.className = 'floating-element';
+                element.style.width = `${size}px`;
+                element.style.height = `${size}px`;
+                element.style.top = `${Math.random() * 100}%`;
+                element.style.left = `${Math.random() * 100}%`;
+                element.style.backgroundColor = color;
+                element.style.animationDelay = `${Math.random() * 10}s`;
+                element.style.animationDuration = `${Math.random() * 10 + 10}s`;
+
+                floatingElements.appendChild(element);
+            }
+        }
+
+        generateFloatingElements();
+
+        // Generate elevator elements
+        function generateElevators() {
+            const floatingElements = document.querySelector('.floating-elements');
+
+            for (let i = 0; i < 4; i++) {
+                const elevator = document.createElement('div');
+                elevator.className = 'elevator';
+                elevator.style.top = `${Math.random() * 80 + 10}%`;
+                elevator.style.left = `${Math.random() * 80 + 10}%`;
+                elevator.style.animationDelay = `${Math.random() * 5}s`;
+                elevator.style.animationDuration = `${Math.random() * 5 + 5}s`;
+
+                floatingElements.appendChild(elevator);
+            }
+        }
+
+        generateElevators();
+    </script>
+</body>
+
+</html>
+
+<script>
+
+    // Configura cada formulário
+    //               FORM           BOTAO           LABEL 
+    setupFormSubmit("contactForm1", "submitButton1", "resposta1", "https://script.google.com/macros/s/AKfycbyaQmiwGoT4nLz6MZWfA9qThOya7eM1RPzxkEetgT9y9597KC4aVD3AMnHSpcZM-ds/exec");
+
+
+    //-----------BEGIN SCRIPT POST FORM ------------------
+    //
+    // ====== [Submit GS script - Planilha] ======
+    // Version: 3.0.4
+    // Date: 2025-07-29
+    // Changes:
+    // - Corrigido bug de validação no botão "Salvar"
+    // - multi implementação
+    // - Adicionado controle de "multiform"
+    // Script listener triggers the action. Do not set up the 'action' form or assign the 'action' attribute — only set the ID.
+    // - corretor.fettuccia@gmail.com
+    // - 5551998111078
+
+    function setupFormSubmit(formId, submitButtonId, respostaId, actionUrl) {
+        const form = document.getElementById(formId);
+        const resposta = document.getElementById(respostaId);
+        const submitButton = document.getElementById(submitButtonId);
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Desabilita o botão e muda o texto
+            submitButton.disabled = true;
+            submitButton.textContent = "Enviando...";
+
+            // Gera data/hora atual
+            const agora = new Date();
+            const dataHoraFormatada = agora.toLocaleString("pt-BR");
+
+            // Se o formulário tiver um campo dataHora, preenche
+            const dataHoraField = form.querySelector("[name='dataHora']");
+            if (dataHoraField) {
+                dataHoraField.value = dataHoraFormatada;
+            }
+
+            const formData = new FormData(form);
+
+            fetch(actionUrl, {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.text())
+                .then(msg => {
+                    resposta.innerText = msg;
+                    resposta.className = "success";
+                    form.reset();
+
+                    // Reabilita o botão e restaura o texto original
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Enviar";
+
+                    setTimeout(() => {
+                        resposta.innerText = "";
+                        resposta.className = "";
+                    }, 3000);
+                })
+                .catch(err => {
+                    resposta.innerText = "Erro ao enviar dados. Por favor, tente novamente.";
+                    resposta.className = "error";
+                    console.error(err);
+
+                    // Reabilita o botão em caso de erro
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Enviar";
+                });
+        });
+    }
+
+    //-----------whatsapp.;
+    //setup
+    const iconepagina = "";
+    const WPhone = "5551998111078";                                      /* telefone */
+    const vProduto = "Varandas Trend Living";                               /* nome do prod */
+    const defaultmsg = "Gostaria de mais informações sobre o " + vProduto; /* msg padrão whats */
+
+    //changeFavicon(iconepagina); /*muda icone da página */
+    // Seleciona a tag <link> do favicon e muda seu 'href'
+    //function changeFavicon(newIconPath) {
+    //    const favicon = document.querySelector('link[rel="icon"]');
+    //    favicon.href = newIconPath;
+    //} 
+
+
+
+
+
+    function wamesend() {
+        return generateWhatsAppLink(WPhone, defaultmsg);
+    }
+
+    // Função para codificar a mensagem para o formato correto do WhatsApp
+    function formatarParaURLEncoding(texto) {
+        // Usa encodeURIComponent para codificar o texto
+        // Substitui manualmente as quebras de linha por %0A
+        return encodeURIComponent(texto).replace(/%0A/g, '%0A').replace(/\n/g, '%0A');
+    }
+
+    function generateWhatsAppLink(phone, message) {
+        // Codifica a mensagem usando a função de URL encoding
+        const encodedMessage = formatarParaURLEncoding(message);
+        // Gera a URL do WhatsApp
+        const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+
+        // Exibe a URL codificada no campo de texto
+        return whatsappUrl;
+    }
+
+
+    // Máscara para telefone
+    document.getElementById('telefone2').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+
+        if (value.length > 11) {
+            value = value.substring(0, 11);
+        }
+
+        if (value.length > 0) {
+            value = value.replace(/^(\d{0,2})(\d{0,5})(\d{0,4}).*/, '($1) $2-$3');
+        }
+
+        e.target.value = value;
+    });
+
+    document.getElementById('telefone1').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+
+        if (value.length > 11) {
+            value = value.substring(0, 11);
+        }
+
+        if (value.length > 0) {
+            value = value.replace(/^(\d{0,2})(\d{0,5})(\d{0,4}).*/, '($1) $2-$3');
+        }
+
+        e.target.value = value;
+    });
+
+    // Validação para o campo de data
+    document.getElementById('nascimento1').addEventListener('change', function (e) {
+        const selectedDate = new Date(e.target.value);
+        const today = new Date();
+
+        if (selectedDate > today) {
+            alert('Data de nascimento não pode ser no futuro');
+            e.target.value = '';
+        }
+    });
+
+    // Validação para o campo de data
+    document.getElementById('nascimento2').addEventListener('change', function (e) {
+        const selectedDate = new Date(e.target.value);
+        const today = new Date();
+
+        if (selectedDate > today) {
+            alert('Data de nascimento não pode ser no futuro');
+            e.target.value = '';
+        }
+    });
+</script>
