@@ -1108,6 +1108,98 @@ footer {
     opacity: 1;
     transform: translateX(0);
 }
+
+/* FIM - CSS - POPUPLEAD */
+/* Estilos do Popup-lead */
+.lead-popup {
+  position: fixed;
+  bottom: -100%;
+  right: 20px;
+  width: 100%;
+  max-width: 350px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 20px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0;
+}
+
+.lead-popup.visible {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--gray);
+  transition: color 0.3s;
+}
+
+.close-popup:hover {
+  color: var(--primary-color);
+}
+
+.popup-content {
+  padding: 10px;
+}
+
+.popup-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.popup-benefits {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.popup-benefits li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.popup-benefits i {
+  color: var(--secondary-color);
+  margin-right: 8px;
+}
+
+.popup-form .form-group {
+  margin-bottom: 15px;
+}
+
+.popup-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.popup-form input:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .lead-popup {
+    right: 10px;
+    left: 10px;
+    max-width: calc(100% - 20px);
+  }
+}
+/* FIM - CSS - POPUPLEAD */
+
     </style>
 </head>
 
@@ -1821,7 +1913,7 @@ footer {
             <div class="contact-form" data-animate="slideRight">
                 <h3>Agende uma Visita</h3>
                 <form id="contactForm1"> <!-- formulario -->
-                    <input type="text" id="produto1" name="produto" value="Grand Park Moinhos" hidden> <br>
+                    <input type="text" id="produto1" name="produto" value="Varandas Trend Living" hidden> <br>
                     <input type="hidden" id="dataHora1" name="dataHora">
 
                     <!-- Campos existentes visíveis -->
@@ -1921,7 +2013,121 @@ footer {
         </div>
     </footer>
 
-    <script>
+<!-- INICIO HTML LEAD POPUP -->
+<!-- Popup de Captura de Lead -->
+<div class="lead-popup" id="leadPopup">
+  <button class="close-popup" id="closePopup">&times;</button>
+  <div class="popup-content">
+    <h3>Quer saber mais sobre o Varandas Trend Living?</h3>
+    <p>Deixe seu contato para receber:</p>
+    <ul class="popup-benefits">
+      <li><i class="fas fa-check-circle"></i> Condições exclusivas</li>
+      <li><i class="fas fa-check-circle"></i> Plantas detalhadas</li>
+      <li><i class="fas fa-check-circle"></i> Valores atualizados</li>
+    </ul>
+    <form id="popupForm" class="popup-form">
+      <input type="text" id="produto" name="produto" value="Varandas Trend Living" hidden>
+      <input type="hidden" id="dataHora2" name="dataHora">
+      <div class="form-group">
+        <input type="text" id="nome2" name="nome" placeholder="Seu nome" required>
+      </div>
+      <div class="form-group">
+        <input type="tel" id="telefone2" name="telefone" placeholder="Seu telefone" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email2" name="email" placeholder="Seu melhor e-mail">
+      </div>
+      <button type="submit" id="submitButton2" class="cta-button">
+      <label id="resposta2"></label>
+        <i class="fas fa-paper-plane"></i> Enviar
+      </button>
+    </form>
+  </div>
+</div>
+<!-- FIM HTML LEAD POPUP -->
+
+
+
+</body>
+
+</html>
+/* INICIO JAVASCRIPT HTML LEAD POPUP  */
+<script>
+// Controle do Popup
+document.addEventListener('DOMContentLoaded', function() {
+  const popup = document.getElementById('leadPopup');
+  const closeBtn = document.getElementById('closePopup');
+  const popupForm = document.getElementById('popupForm');
+  
+  // Exibir popup após 30 segundos ou ao sair da página
+  let popupTimer = setTimeout(showPopup, 30000);
+  
+  // Mostrar popup
+  function showPopup() {
+    // Verificar se já foi mostrado (usando cookie)
+    if (!document.cookie.includes('popupShown=true')) {
+      popup.classList.add('visible');
+      // Setar cookie para não mostrar novamente por 1 dia
+      document.cookie = "popupShown=true; max-age=86400; path=/";
+    }
+  }
+  
+  // Fechar popup
+  closeBtn.addEventListener('click', function() {
+    popup.classList.remove('visible');
+    clearTimeout(popupTimer);
+  });
+  
+  // Enviar formulário
+  popupForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Capturar dados
+    const formData = {
+      nome: document.getElementById('popupNome').value,
+      telefone: document.getElementById('popupTelefone').value,
+      email: document.getElementById('popupEmail').value,
+      origem: 'Popup Lead'
+    };
+    
+    // Aqui você pode adicionar o código para enviar os dados
+    // para seu CRM, Google Sheets, ou outro sistema
+    console.log('Dados do lead:', formData);
+    
+    // Feedback visual
+    alert('Obrigado pelo seu interesse! Entraremos em contato em breve.');
+    
+    // Fechar popup após envio
+    popup.classList.remove('visible');
+    
+    // Resetar formulário
+    popupForm.reset();
+  });
+  
+  // Mostrar popup quando o usuário tentar sair
+  window.addEventListener('mouseout', function(e) {
+    if (e.clientY < 0 && !document.cookie.includes('popupShown=true')) {
+      showPopup();
+      clearTimeout(popupTimer);
+    }
+  });
+});
+
+// Máscara para telefone no popup
+document.getElementById('popupTelefone').addEventListener('input', function(e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length > 11) value = value.substring(0, 11);
+  if (value.length > 0) {
+    value = value.replace(/^(\d{0,2})(\d{0,5})(\d{0,4}).*/, '($1) $2-$3');
+  }
+  e.target.value = value;
+});
+</script>
+
+/* FIM JAVASCRIPT HTML LEAD POPUP  */
+
+
+<script>
         // Ripple Effect
         document.addEventListener('click', function (e) {
             const ripple = document.createElement('div');
@@ -2120,15 +2326,15 @@ footer {
 
         generateElevators();
     </script>
-</body>
-
-</html>
-
 <script>
 
     // Configura cada formulário
     //               FORM           BOTAO           LABEL 
-    setupFormSubmit("contactForm1", "submitButton1", "resposta1", "https://script.google.com/macros/s/AKfycbyaQmiwGoT4nLz6MZWfA9qThOya7eM1RPzxkEetgT9y9597KC4aVD3AMnHSpcZM-ds/exec");
+    const urlEXEC="https://script.google.com/macros/s/AKfycbw36BlQOoMwBKi2gZNJ0K490SHukLLEcFkGLuFggQ-CblyBVfEWt652O6FziqKUN1iM/exec"
+
+    setupFormSubmit("contactForm1", "submitButton1", "resposta1", urlEXEC);
+    setupFormSubmit("popupForm", "submitButton2", "resposta2", urlEXEC);
+    
 
 
     //-----------BEGIN SCRIPT POST FORM ------------------
