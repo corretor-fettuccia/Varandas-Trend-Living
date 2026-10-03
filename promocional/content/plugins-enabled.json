@@ -1,0 +1,202 @@
+[
+  {
+    "id": "parallax",
+    "name": "Parallax",
+    "type": "section",
+    "compositionRole": "both",
+    "compositionCardinality": "multiple",
+    "version": "2.10.1",
+    "source": "plugins/parallax/plugin.json",
+    "packageType": "bundled"
+  },
+  {
+    "id": "specs",
+    "name": "Ficha do imóvel",
+    "type": "section",
+    "compositionRole": "section",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/specs/plugin.json",
+    "packageType": "core"
+  },
+  {
+    "id": "highlights",
+    "name": "Destaques",
+    "type": "section",
+    "compositionRole": "section",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/highlights/plugin.json",
+    "packageType": "core"
+  },
+  {
+    "id": "smart-plant",
+    "name": "Smart Plant",
+    "type": "section",
+    "compositionRole": "both",
+    "compositionCardinality": "multiple",
+    "version": "1.4.2",
+    "source": "plugins/smart-plant-v1.4.2/plugin.json",
+    "packageType": "bundled"
+  },
+  {
+    "id": "beneficios-modal",
+    "name": "Benefícios + Modal",
+    "type": "section",
+    "compositionRole": "both",
+    "compositionCardinality": "multiple",
+    "version": "1.1.1",
+    "source": "plugins/beneficios-modal/plugin.json",
+    "packageType": "bundled"
+  },
+  {
+    "id": "gallery",
+    "name": "Galeria imersiva",
+    "type": "section",
+    "compositionRole": "section",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/gallery/plugin.json",
+    "packageType": "core"
+  },
+  {
+    "id": "gallery-big-four",
+    "name": "Galeria Big Four",
+    "type": "section",
+    "compositionRole": "both",
+    "compositionCardinality": "multiple",
+    "version": "2.3.0",
+    "source": "plugins/gallery-big-four/plugin.json",
+    "packageType": "bundled"
+  },
+  {
+    "id": "button-single",
+    "name": "Botão",
+    "type": "section",
+    "compositionRole": "both",
+    "compositionCardinality": "single",
+    "version": "1.0.0",
+    "source": "plugins/button-single/plugin.json",
+    "packageType": "bundled"
+  },
+  {
+    "id": "lifestyle",
+    "name": "Lifestyle",
+    "type": "section",
+    "compositionRole": "section",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/lifestyle/plugin.json",
+    "packageType": "core"
+  },
+  {
+    "id": "payment",
+    "name": "Condições de pagamento",
+    "type": "section",
+    "compositionRole": "section",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/payment/plugin.json",
+    "packageType": "core"
+  },
+  {
+    "id": "location",
+    "name": "Localização",
+    "type": "section",
+    "compositionRole": "both",
+    "compositionCardinality": "multiple",
+    "version": "1.1.0",
+    "source": "plugins/location/plugin.json",
+    "packageType": "bundled"
+  },
+  {
+    "id": "faq",
+    "name": "Perguntas frequentes",
+    "type": "section",
+    "compositionRole": "section",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/faq/plugin.json",
+    "packageType": "core"
+  },
+  {
+    "id": "form-sender-v4",
+    "name": "Form Sender v4",
+    "type": "section",
+    "compositionRole": "both",
+    "compositionCardinality": "multiple",
+    "version": "4.4.6",
+    "source": "plugins/form-sender-v4/plugin.json",
+    "packageType": "bundled"
+  },
+  {
+    "id": "whatsapp-flutuante-pro",
+    "name": "WhatsApp flutuante Pro",
+    "type": "section",
+    "compositionRole": "both",
+    "compositionCardinality": "multiple",
+    "version": "1.1.0",
+    "source": "plugins/whatsapp-flutuante-pro/plugin.json",
+    "packageType": "bundled"
+  },
+  {
+    "id": "anti-ia-copy-policy",
+    "name": "Anti-IA Copy — Política de uso",
+    "type": "section",
+    "compositionRole": "both",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/anti-ia-copy/plugin.json",
+    "packageType": "bundled"
+  },
+  {
+    "id": "menu-fixo-adaptavel-pro",
+    "name": "Menu fixo adaptável Pro",
+    "type": "section",
+    "compositionRole": "both",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/menu-fixo-adaptavel-pro-v1.0.0/plugin.json",
+    "packageType": "bundled"
+  },
+  {
+    "id": "footer",
+    "name": "Rodapé profissional",
+    "type": "section",
+    "compositionRole": "section",
+    "compositionCardinality": "multiple",
+    "version": "1.1.1",
+    "source": "plugins/footer/plugin.json",
+    "packageType": "core"
+  },
+  {
+    "id": "reveal",
+    "name": "Revelação no scroll",
+    "type": "behavior",
+    "compositionRole": "behavior",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/reveal/plugin.json",
+    "packageType": "core"
+  },
+  {
+    "id": "lightbox",
+    "name": "Lightbox de galeria",
+    "type": "behavior",
+    "compositionRole": "behavior",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/lightbox/plugin.json",
+    "packageType": "core"
+  },
+  {
+    "id": "content-protection",
+    "name": "Proteção de conteúdo",
+    "type": "behavior",
+    "compositionRole": "behavior",
+    "compositionCardinality": "multiple",
+    "version": "1.0.0",
+    "source": "plugins/content-protection/plugin.json",
+    "packageType": "bundled"
+  }
+]
